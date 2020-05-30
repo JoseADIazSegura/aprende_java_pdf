@@ -31,6 +31,6 @@ public class Ameba {
     }
 
     public String toString() {
-        return "Soy una ameba y peso " + this.peso + " microgramos";
+        return "Soy una ameba y peso " + this.peso + " microgramo";
     }
 }
