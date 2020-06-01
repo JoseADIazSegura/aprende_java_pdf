@@ -25,6 +25,27 @@ public class ColeccionDeDiscos {
         int i;
         Scanner scanner = new Scanner(System.in);
 
+        album[0].setCodigo("0");
+        album[0].setAutor("BonJovi");
+        album[0].setTitulo("Living");
+        album[0].setGenero("Rock");
+        album[0].setDuracion(35);
+        album[1].setCodigo("1");
+        album[1].setAutor("BonJovi");
+        album[1].setTitulo("Living");
+        album[1].setGenero("Metal");
+        album[1].setDuracion(45);
+        album[2].setCodigo("2");
+        album[2].setAutor("ACDC");
+        album[2].setTitulo("Highway");
+        album[2].setGenero("Metal");
+        album[2].setDuracion(25);
+        album[3].setCodigo("4");
+        album[3].setAutor("ACDC");
+        album[3].setTitulo("Living2");
+        album[3].setGenero("Rock");
+        album[3].setDuracion(40);
+
         do {
             System.out.println("\n\nCOLECCIÓN DE DISCOS");
             System.out.println("===================");
@@ -41,16 +62,61 @@ public class ColeccionDeDiscos {
                 case 1:
                     System.out.println("\nLISTADO");
                     System.out.println("===============");
-                    for (int j = 0; j < album.length; j++) {
-                        if (!album[j].getCodigo().equals("LIBRE")) {
-                            System.out.println(album[j]);
-                        }
+                    System.out.println("Seleccione un listado :");
+                    System.out.println("1. Listado Completo");
+                    System.out.println("2. Listado por autor");
+                    System.out.println("3. Listado por genero");
+                    System.out.println("4. Listado por rango de duracion");
+                    int select = scanner.nextInt();
+                    switch (select) {
+                        case 1:
+                            for (int j = 0; j < album.length; j++) {
+                                if (!album[j].getCodigo().equals("LIBRE")) {
+                                    System.out.println(album[j]);
+                                }
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Digite el nombre del autor a listar: ");
+                            String autor2 = scanner.next();
+                            for (int j = 0; j < album.length; j++) {
+                                if (!album[j].getCodigo().equals("LIBRE")) {
+                                    if (album[j].getAutor().equals(autor2)) {
+                                        System.out.println(album[j]);
+                                    }
+                                }
+                            }
+                            break;
+                        case 3:
+                            System.out.println("Digite el nombre del genero a listar: ");
+                            String genero = scanner.next();
+                            for (int j = 0; j < album.length; j++) {
+                                if (!album[j].getCodigo().equals("LIBRE")){
+                                    if(album[j].getGenero().equals(genero)) {
+                                        System.out.println(album[j]);
+                                    }
+                                }
+                            }
+                            break;
+                        case 4:
+                            System.out.println("Digite los rangos de los discos a listar: ");
+                            System.out.println("Digite el menor valor de duracion: ");
+                            int valor1 = scanner.nextInt();
+                            System.out.println("Digite el mayor valor de duracion: ");
+                            int valor2 = scanner.nextInt();
+                            for (int j = 0; j < album.length; j++) {
+                                if (!album[j].getCodigo().equals("LIBRE") &&
+                                        (album[j].getDuracion() >= valor1 && album[j].getDuracion() <= valor2)) {
+                                    System.out.println(album[j]);
+                                }
+                            }
+                            break;
                     }
                     break;
                 //Opcion añadir disco al album
                 case 2:
                     for (int j = 0; j <= album.length; j++) {
-                        if (album.length >= j ) {
+                        if (album.length >= j) {
                             if (album[j].getCodigo() == "LIBRE") {
                                 System.out.println("Añadir nuevo disco: ");
 
