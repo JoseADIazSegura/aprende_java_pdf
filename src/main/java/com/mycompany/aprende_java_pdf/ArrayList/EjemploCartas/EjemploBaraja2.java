@@ -1,12 +1,13 @@
-package com.mycompany.aprende_java_pdf.Diccionarios.EjemploCartas;
+package com.mycompany.aprende_java_pdf.ArrayList.EjemploCartas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-public class EjemploBaraja {
+public class EjemploBaraja2 {
     /**
-     * Realiza un programa que escoja al azar 10 cartas de la baraja española
-     * (10 objetos de la clase Carta). Emplea un objeto de la clase ArrayList para
-     * almacenarlas y asegúrate de que no se repite ninguna.
+     * Modifica el programa anterior de tal forma que las cartas se muestren ordenadas.
+     * Primero se ordenarán por palo: bastos, copas, espadas, oros. Cuando
+     * coincida el palo, se ordenará por número: as, 2, 3, 4, 5, 6, 7, sota, caballo, rey.
      */
     public static void main(String[] args) {
         ArrayList<Carta> baraja = new ArrayList<>();
@@ -23,6 +24,7 @@ public class EjemploBaraja {
                 }
             }
         }
+        baraja.sort(Carta::compareTo);
         for (Carta co : baraja) {
             System.out.println(co);
         }

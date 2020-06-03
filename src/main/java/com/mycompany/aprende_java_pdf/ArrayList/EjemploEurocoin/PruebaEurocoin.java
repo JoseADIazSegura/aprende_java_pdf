@@ -1,4 +1,4 @@
-package com.mycompany.aprende_java_pdf.Diccionarios.EjemploEurocoin;
+package com.mycompany.aprende_java_pdf.ArrayList.EjemploEurocoin;
 
 import java.util.ArrayList;
 
