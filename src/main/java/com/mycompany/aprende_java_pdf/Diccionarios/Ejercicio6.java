@@ -3,7 +3,7 @@ package com.mycompany.aprende_java_pdf.Diccionarios;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Ejercicio {
+public class Ejercicio6 {
     /**
      * Implementa el control de acceso al área restringida de un programa. Se debe
      * pedir un nombre de usuario y una contraseña. Si el usuario introduce los
