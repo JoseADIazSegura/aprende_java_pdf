@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" />
 </head>
 <body>
 <h1>Gatos con clase</h1>

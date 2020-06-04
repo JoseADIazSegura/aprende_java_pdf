@@ -19,14 +19,14 @@ public class Gato {
 
     @Override
     public String toString() {
-        return "<img src='" + imagen + "' width='80'>Hola, soy " + nombre + "<br>";
+        return "<div class=\"acciongato\"><img src=\"" + imagen + "\" width=\"80\"><div class=\"arrow_box\">&nbsp;Hola, soy " + nombre + "&nbsp;</div></div>";
     }
 
     public String maulla() {
-        return "<img src='" + imagen + "' width='80'>Miauuuuuuuu<br>";
+        return "<div class=\"acciongato\"><img src=\"" + imagen + "\" width=\"80\"><div class=\"arrow_box\">&nbsp;Miauuuuuuuu&nbsp;</div></div>";
     }
 
     public String come(String comida) {
-        return "<img src='" + imagen + "' width='80'>Estoy comiendo " + comida + "<br>";
+        return "<div class=\"acciongato\"><img src=\"" + imagen + "\" width=\"80\"><div class=\"arrow_box\">&nbsp;Estoy comiendo " + comida + "&nbsp;</div></div>";
     }
 }
