@@ -1,4 +1,4 @@
-package com.mycompany.aprende_java_pdf.FicherosTexto;
+package com.mycompany.aprende_java_pdf.FicherosTexto.Ejemplos;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
