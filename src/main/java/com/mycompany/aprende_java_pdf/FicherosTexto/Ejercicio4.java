@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Ejercicio4 {
     public static void main(String[] args) {
         try{
+
             BufferedReader br = new BufferedReader(new FileReader("lorem.txt"));
             BufferedWriter bw = new BufferedWriter(new FileWriter("lorem_sort.txt"));
 
